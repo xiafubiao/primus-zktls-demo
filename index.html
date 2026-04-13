@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primus zkTLS Demo</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Primus zkTLS DApp Demo</h1>
+    <p class="subtitle">Prove off-chain data with zkTLS attestation</p>
+    
+    <div class="warning-box">
+      ⚠️ This is <strong>Test Mode</strong> - appSecret is visible in frontend code.
+      <br>Never deploy this to production!
+    </div>
+    
+    <div class="card">
+      <h2>Step 1: Wallet / Address</h2>
+      <div class="wallet-section">
+        <button id="btn-connect">Connect Wallet</button>
+        <button id="btn-disconnect" style="display:none">Disconnect</button>
+        <span id="wallet-status">Not connected</span>
+      </div>
+      <div class="input-section">
+        <label>Or enter address manually:</label>
+        <input type="text" id="address-input" placeholder="0x..." />
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>Step 2: Template ID</h2>
+      <input type="text" id="template-input" placeholder="UUID from dev.primuslabs.xyz" />
+      <p class="hint">Get a template ID from <a href="https://dev.primuslabs.xyz" target="_blank">Primus Developer Hub</a></p>
+    </div>
+    
+    <div class="card">
+      <h2>Step 3: Run Attestation</h2>
+      <button id="btn-attest" disabled>Start Attestation</button>
+      <p class="hint">Requires <a href="https://primuslabs.xyz" target="_blank">Primus Browser Extension</a></p>
+    </div>
+    
+    <div class="card result-card">
+      <h2>Result</h2>
+      <div id="log"></div>
+      <pre id="result"></pre>
+    </div>
+  </div>
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
